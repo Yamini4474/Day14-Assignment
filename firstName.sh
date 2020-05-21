@@ -1,11 +1,11 @@
 #!/bin/bash -x
-echo "Enter FirstName "
-read FirstName
-pat="^[A-Z{1}][a-z]*$"
-if [[ $pat == $FirstName ]]
+echo "Enter firstName "
+read firstName
+pat="[A-Z]{3}][a-z]$"
+if [[ $pat =~ $firstName ]]
 then
-	echo Valid;
+	echo Yes
 else
-	echo Invalid;
+	echo No
 fi
 
